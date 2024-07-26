@@ -6,14 +6,20 @@
     <title>@yield('title', 'Document')</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css'>
-   
     @vite('resources/css/app.css')
     @livewireStyles
 </head>
-<body class="bg-stone-900 text-zinc-50">
-    
-    @yield('home')
+<body class="bg-white text-zinc-50">
 
+    
+    @livewire('navbar')
+
+    <div>
+        @yield('home')
+    </div>
+
+    
+    
     @livewireScripts
 </body>
 </html>

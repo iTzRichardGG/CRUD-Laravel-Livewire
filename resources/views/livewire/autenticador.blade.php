@@ -4,10 +4,10 @@
 
         @if ($activeDiv == 'iniciar_sesion')
         <div class="w-2/4 h-screen">
-            <img class="w-full h-full object-cover" src="{{asset ('img/rana.png')}}" alt="">
+            <img class="w-full h-full object-cover" src="{{asset ('img/fondo-autenticacion.jpg')}}" alt="">
         </div>
 
-        <div class="flex justify-center items-center w-2/4 text-lime-700">
+        <div class="flex justify-center items-center w-2/4 text-">
             <div class="w-screen">
 
                 <div class="flex justify-center mb-10 w-full">
@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="flex justify-center items-center text-gray-500">
-                        <button type="submit" class="flex items-center text-white bg-green-800 font-medium rounded-lg text-sm px-7 py-2 mr-4">
+                        <button type="submit" class="flex items-center text-white bg-emerald-900 font-medium rounded-lg text-sm px-7 py-2 mr-4">
                             Iniciar sesión
                         </button>
                         <p>
@@ -50,11 +50,11 @@
         @if ($activeDiv == 'registrarse')
 
         <div class="w-2/4 h-screen">
-            <img class="w-full h-full object-cover" src="{{asset ('img/rana.png')}}" alt="">
+            <img class="w-full h-full object-cover" src="{{asset ('img/fondo-autenticacion.jpg')}}" alt="">
         </div>
 
 
-        <div class="flex justify-center items-center w-2/4 text-lime-700">
+        <div class="flex justify-center items-center w-2/4 text-stone-900">
             <div class="w-3/4 ">
 
                 <div>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="flex justify-center items-center text-gray-500">
-                        <button type="submit" class="flex items-center text-white bg-green-800 font-medium rounded-lg text-sm px-7 py-2 mr-4">
+                        <button type="submit" class="flex items-center text-white bg-emerald-900  font-medium rounded-lg text-sm px-7 py-2 mr-4">
                             Registrarse
                         </button>
                         <p>

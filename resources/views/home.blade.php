@@ -4,5 +4,4 @@
 
 @livewire('home')
 
-
 @endsection

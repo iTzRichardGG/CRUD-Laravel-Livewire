@@ -23,7 +23,7 @@ class CrudProductos extends Component
 
     // Variables para controlar la apertura y cierre de modales
     public $ModalCrear = false;
-    public $ModalVer = false;
+    public $ModalVerProducto = false;
 
     // Variable para almacenar el producto seleccionado para ver sus detalles
     public $ProductoSeleccionado;
@@ -72,23 +72,29 @@ class CrudProductos extends Component
         // Limpiar los campos del formulario despues de guardar
         $this->reset(['nombre', 'descripcion', 'sku', 'precio', 'genero', 'selectedMarca', 'selectedCategoria', 'stockSizes_S', 'stockSizes_M', 'stockSizes_L', 'stockSizes_XL']);
 
-        $this->productos = Productos::all();
-        $this->sizes_productos = Productos_sizes::all();
+        $this->productos = Productos::all(); // Actualizar la lista de productos
     }
     
-
-
     public function VerProducto($id)
     {
 
         $this->ProductoSeleccionado = Productos::find($id);
-        $this->ModalVer = true;
+        $this->ModalVerProducto = true;
         
+    }
+
+    public function EditarProducto()
+    {
+        dd('editar');
     }
 
     public function delete()
     {
         dd('eliminar');
+    }
+
+    public function buscar(){
+        dd('buscar');
     }
 
     public function render()

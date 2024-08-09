@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ProductosFactory extends Factory
 {
     protected $model = Productos::class;
+
+    // define los datos que se van a insertar al modelo cuando se ejecute el seeder
     public function definition(): array
     {
         return [

@@ -13,6 +13,7 @@ class Categorias extends Model
 
     public function products()
     {
+        // Relacion uno a muchos con la tabla productos
         return $this->hasMany(Productos::class);
     }
 

@@ -15,12 +15,16 @@ return new class extends Migration
 
             $table->id();
 
+            // Claves foraneas para la tabla productos y sizes
+            // onDelete('cascade') se encarga de eliminar los productos relacionados con la tabla productos y sizes si una de estas se elimina
+            // con el metodo constrained() se especifica la tabla a la que hace referencia la clave foranea
+            
             $table->foreignId('productos_id')
-            ->constrained()
+            ->constrained('productos')
             ->onDelete('cascade');
 
             $table->foreignId('sizes_id')
-            ->constrained()
+            ->constrained('sizes')
             ->onDelete('cascade');
 
             $table->integer('stock');

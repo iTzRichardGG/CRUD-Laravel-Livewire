@@ -24,12 +24,15 @@ return new class extends Migration
 
             $table->enum ('genero', ['hombre', 'mujer', 'unisex'])->default('unisex');
 
+            // Claves foranea para la marca y la categoria,el metodo onDelete('cascade') se encarga de eliminar los productos relacionados con la marca y la categoria si una de estas se elimina
+            // con el metodo constrained() se especifica la tabla a la que hace referencia la clave foranea
+        
             $table->foreignId('marca_id')
-                ->constrained()
+                ->constrained('marcas')
                 ->onDelete('cascade');
 
             $table->foreignId('categoria_id')
-                ->constrained()
+                ->constrained('categorias')
                 ->onDelete('cascade');
 
             $table->string('path_imagen')->nullable();
